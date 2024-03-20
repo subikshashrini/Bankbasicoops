@@ -1,17 +1,17 @@
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
+
 public class Main {
     public static void main(String[] args) {
-        // Press Alt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
 
-        // Press Shift+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
-
-            // Press Shift+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
-        }
+        SavingsAccount saver1 = new SavingsAccount(2000);
+        SavingsAccount saver2 = new SavingsAccount(3000);
+        SavingsAccount.modifyinterestrate(3);
+        System.out.println("new balance with 3% interest");
+        System.out.println("Saver1 balance:" +(saver1.getsavingsBalance() + saver1.calculatemonthlyinterest(SavingsAccount.annualInterestRate, saver1.getsavingsBalance())));
+        System.out.println("Saver2 balance:" +(saver2.getsavingsBalance() + saver2.calculatemonthlyinterest(SavingsAccount.annualInterestRate, saver2.getsavingsBalance())));
+        //used getter methods to get the value of private member
+        SavingsAccount.modifyinterestrate(4);
+        System.out.println("new balance with 4% interest");
+        System.out.println("Saver1 balance:" +(saver1.getsavingsBalance() + saver1.calculatemonthlyinterest(SavingsAccount.annualInterestRate, saver1.getsavingsBalance())));
+        System.out.println("Saver2 balance:" +(saver2.getsavingsBalance() + saver2.calculatemonthlyinterest(SavingsAccount.annualInterestRate, saver2.getsavingsBalance())));
     }
 }
